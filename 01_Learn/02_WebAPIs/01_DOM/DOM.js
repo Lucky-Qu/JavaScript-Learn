@@ -33,3 +33,10 @@ const btn = document.querySelector("#button")
 btn.addEventListener("click", function (){
     alert("Hi")
 })
+// 为事件回调函数绑定的第一个参数为事件对象，包含相关的参数
+const input = document.getElementById("input")
+input.addEventListener("keyup", function (e){
+    if (e.key === "Enter"){
+        alert("刚刚键入了Enter")
+    }
+})
