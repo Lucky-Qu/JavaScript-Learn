@@ -50,3 +50,11 @@ input.addEventListener("keyup", function (e){
 })
 //可以使用removeEventListener来解绑事件监听，匿名函数无法解绑
 input.removeEventListener("click", function(){})
+//利用冒泡的原理，可以将一个想要绑定到子元素上的事件绑定到父元素身上来委托事件从而简化代码书写
+//通过事件对象中的target来获取调用的子元素
+const div2 = document.getElementById("div2")
+const div3 = document.getElementById("div3")
+//给父元素绑定事件
+div2.addEventListener("click", function (e){
+    e.target.style.backgroundColor = "gray"
+})
