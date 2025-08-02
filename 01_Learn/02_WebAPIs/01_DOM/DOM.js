@@ -40,3 +40,13 @@ input.addEventListener("keyup", function (e){
         alert("刚刚键入了Enter")
     }
 })
+//在普通函数中，this指代的是window，在调用函数中，指代的是调用者
+//在调用过程中，如果子元素的一个绑定事件触发，那么他父元素的绑定事件也会依次冒泡触发，通过使用事件对象stopPropagation来阻止冒泡
+input.addEventListener("keyup", function (e){
+    if (e.key === "Enter"){
+        alert("刚刚键入了Enter")
+    }
+    e.stopPropagation()
+})
+//可以使用removeEventListener来解绑事件监听，匿名函数无法解绑
+input.removeEventListener("click", function(){})
