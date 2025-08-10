@@ -58,3 +58,27 @@ const div3 = document.getElementById("div3")
 div2.addEventListener("click", function (e){
     e.target.style.backgroundColor = "gray"
 })
+//想要阻止默认事件行为（如超链接跳转，提交表单），可以使用事件对象.preventDefault
+// const example3 = document.querySelector("a")
+// example3.addEventListener("click", function (e){
+//     e.preventDefault()
+// })
+//可以通过scroll事件来获取滚动参数
+input.addEventListener("scroll", function (e){
+    input.scrollTop
+})
+//可以通过实例化一个时间来获取时间 不填写参数为获取当前时间，填写参数为获取参数指定的时间
+const time1 = new Date()
+const time2 = new Date("2025-7-29 08:30:00")
+console.log(time1, time2)
+//日期对象中有许多方法以便于获取具体时间
+console.log(time1.getDay())
+//使用日期对象中的getTime方法可以获得当前时间戳，也可以使用date.now来获得时间戳
+console.log(time1.getTime())
+//在dom树上可以通过关系来获取各个节点
+const example3 = document.getElementById("div3")
+console.log(example3.parentNode)
+//使用document中的createElement可以创建一个节点
+const divExample = document.createElement("div")
+// 可以追加到一个元素中作为他的子元素
+document.body.appendChild(divExample)
