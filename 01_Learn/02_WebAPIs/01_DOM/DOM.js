@@ -78,7 +78,15 @@ console.log(time1.getTime())
 //在dom树上可以通过关系来获取各个节点
 const example3 = document.getElementById("div3")
 console.log(example3.parentNode)
+//可以访问子节点的parentNode来访问他的父节点
+divExample.parentNode
+//可以通过children来获得所有的子节点（伪数组）
+divExample.children
 //使用document中的createElement可以创建一个节点
 const divExample = document.createElement("div")
 // 可以追加到一个元素中作为他的子元素
 document.body.appendChild(divExample)
+//可以通过insertBefore方法将元素插入到指定子元素前
+document.body.insertBefore()
+//cloneNode方法可以克隆一个元素
+document.body.cloneNode(true)
