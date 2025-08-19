@@ -88,5 +88,7 @@ const divExample = document.createElement("div")
 document.body.appendChild(divExample)
 //可以通过insertBefore方法将元素插入到指定子元素前
 document.body.insertBefore()
-//cloneNode方法可以克隆一个元素
+//cloneNode方法可以克隆一个元素，true为深克隆，false为浅克隆
 document.body.cloneNode(true)
+//可以通过父元素的remove方法来删除子元素
+document.body.removeChild(divExample)
