@@ -13,3 +13,11 @@ setTimeout(function (){
     console.log(2)
 })
 console.log(3)
+//location的数据类型是对象，他拆分并保存了URL中的各个组成部分
+// 修改location的href属性可以实现跳转网页的效果
+const baidu = document.getElementById("baidu")
+baidu.addEventListener("click", function(){
+    location.href="https://baidu.com"
+})
+//location的hash属性中保存了符号#的后面部分
+// 使用reload方法可以刷新页面，参数填true为强制刷新
