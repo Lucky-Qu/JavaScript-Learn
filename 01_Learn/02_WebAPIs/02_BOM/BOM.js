@@ -11,7 +11,7 @@ setTimeout(function (){
 console.log(1)
 setTimeout(function (){
     console.log(2)
-})
+},0)
 console.log(3)
 //location的数据类型是对象，他拆分并保存了URL中的各个组成部分
 // 修改location的href属性可以实现跳转网页的效果
@@ -21,3 +21,12 @@ baidu.addEventListener("click", function(){
 })
 //location的hash属性中保存了符号#的后面部分
 // 使用reload方法可以刷新页面，参数填true为强制刷新
+// location.reload()
+
+//navigator的数据类型是对象，其存储了浏览器相关的信息
+// 其中userAgent中存储了用户的平台信息
+console.log(navigator.userAgent)
+//history存储了历史相关信息，可以使用go，forward，back方法来回退，前进页面
+// history.back()
+//本地存储
+//js支持将数据存储到浏览器当中以便读取
