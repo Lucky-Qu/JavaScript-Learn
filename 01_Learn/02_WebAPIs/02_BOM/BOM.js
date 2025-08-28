@@ -30,3 +30,33 @@ console.log(navigator.userAgent)
 // history.back()
 //本地存储
 //js支持将数据存储到浏览器当中以便读取
+//js存储的方式是键值对的形式
+//本地存储只能存储字符串数据类型
+//增改
+localStorage.setItem("uname", "LuckyQu")
+//清除所有
+// localStorage.clear()
+//查找元素
+localStorage.getItem("uname")
+//删除指定
+localStorage.removeItem("uname")
+// sessionStorage和localstorage的区别是生命周期，前者生命周期为关闭浏览器窗口，在同一个窗口下数据可以共享，用法和localStorage相同
+sessionStorage.setItem("age","11")
+sessionStorage.removeItem("age")
+//为了解决将对象存储在本地存储的问题，可以将想要存储的对象转化为json格式
+const LuckyQu = {
+    name : "LuckyQu",
+    age: 21
+}
+sessionStorage.setItem("obj", JSON.stringify(LuckyQu))
+console.log(JSON.parse(localStorage.getItem("obj")))
+//数组中的map方法可以处理数据，并且返回新的数组
+let b = [1,2,3,4,5]
+let c = b.map(function (item, index){
+    console.log(item)
+    console.log(index)
+    return item + "A";
+})
+console.log(c)
+//使用join方法可以将数组变为一个字符串，内参数为元素之间的符号
+c.join(",")
