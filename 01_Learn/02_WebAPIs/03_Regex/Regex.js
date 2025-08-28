@@ -48,3 +48,10 @@ console.log(/[^.]/.test("\n"))
 // \W 匹配除了字母，下划线，数字
 // \s 匹配空格
 // \S 匹配非空格
+//修饰符，g表示global，全局查找，i表示ignore，忽略大小写
+console.log(/^a$/i.test("A"))
+console.log(/^a$/i.test("a"))
+console.log("Golang golang".replace(/Golang+/,"Rust"))
+console.log("Golang golang".replace(/Golang+/i,"Rust"))
+console.log("Golang golang".replace(/Golang+/g,"Rust"))
+console.log("Golang golang".replace(/Golang+/ig,"Rust"))
